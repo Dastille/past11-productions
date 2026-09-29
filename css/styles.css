@@ -176,19 +176,22 @@ a:hover { color: var(--link-hover); }
 }
 .brand:hover { color: var(--text); text-decoration: none; }
 
-/* Brand mark: Past 11 clock logo from documentary title card (~10s) */
+/* Brand mark: Past 11 clock logo from documentary title card (~10s).
+   Flat image only — no orb background, border-radius, box-shadow, or glow. */
 .brand-mark {
   width: 2.4rem;
   height: 2.4rem;
   flex-shrink: 0;
   object-fit: contain;
   display: block;
-  /* Soft brass glow to match winter slate/brass theme */
-  filter: drop-shadow(0 0 6px rgba(196, 164, 106, 0.28));
+  background: none;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
 }
 html.theme-light .brand-mark {
   /* White-on-transparent mark → dark for snow/light backgrounds */
-  filter: invert(1) drop-shadow(0 0 4px rgba(63, 81, 94, 0.2));
+  filter: invert(1);
 }
 
 .brand-text {
